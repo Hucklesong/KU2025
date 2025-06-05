@@ -91,8 +91,8 @@ class NavigationNode(Node):
         self.key_publisher = self.create_publisher(Float32, "/actuator/key/degree", 10)
         self.thruster_publisher = self.create_publisher(Float32, "/actuator/thruster/percentage", 10)
 
-        self.create_timer(1.0, self.median_gps)
-        self.create_timer(0.1, self.timer_callback)
+        self.create_timer(0.5, self.median_gps)
+        self.create_timer(1.0, self.timer_callback)
 
     def emo_switch_callback(self, data: Bool):
         if data.data:
