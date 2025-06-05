@@ -57,7 +57,7 @@ class NavigationNode(Node):
             (35.1, 126.1)
         ]
         self.current_wp_idx = 0
-        self.arrival_threshold = 5.0  # [m] 경유점 도달반경
+        self.arrival_threshold = 2.0  # [m] 경유점 도달반경
 
         self.sailing_section = "navigate"
 
